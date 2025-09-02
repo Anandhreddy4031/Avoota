@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suit">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+    </listeners>
+    <test verbose="9" preserve-order="true" name="Batch Execution">
+        <classes>
+            <class name="Hotel_Bookings.My_Account"/>
+            <class name="Hotel_Bookings.Hotel_Booking"/>
+            <class name="Hotel_Bookings.Hotel_Booking1"/>
+            <class name="Hotel_Bookings.Stay_In_Style"/>
+            <class name="Hotel_Bookings.Popular_destination"/>
+            <class name="Hotel_Bookings.Trending_Hotels"/>
+            <class name="Hotel_Bookings.Iconic_Temple"/>
+            <class name="Hotel_Bookings.Explore_india"/>
+        </classes>
+    </test>
+</suite>
