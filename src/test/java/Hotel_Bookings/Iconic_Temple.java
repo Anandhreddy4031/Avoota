@@ -32,8 +32,10 @@ public class Iconic_Temple {
         driver.findElement(By.xpath("(//button[text()='+'])[1]")).click();
         //Clicking on apply
         driver.findElement(By.xpath("//button[@class='apply-guests-button']")).click();
+        Thread.sleep(3000);
         //Clicking on modify search
         driver.findElement(By.xpath("//button[@class='search-button-search-result']")).click();
+        Thread.sleep(3000);
         //Price per night
         driver.findElement(By.xpath("//label[text()='₹0 - ₹3,000']")).click();
         //Clicking on hotel

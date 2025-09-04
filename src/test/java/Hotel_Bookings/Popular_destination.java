@@ -27,10 +27,10 @@ public class Popular_destination {
         Thread.sleep(1000);
         //Clicking on search
         driver.findElement(By.xpath("//span[text()='Modify Search']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         //Price per night
         driver.findElement(By.xpath("(//div[@class='filter-item'])[2]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         //Clicking on hotel
         WebElement hotel=driver.findElement(By.xpath("//h2[text()='La Casita']"));
         JavascriptExecutor js=(JavascriptExecutor) driver;
@@ -58,12 +58,6 @@ public class Popular_destination {
         driver.findElement(By.xpath("//select[@name='countryCode']")).click();
         driver.findElement(By.xpath("//option[@value='+91']")).click();
         driver.findElement(By.xpath("//input[@placeholder='Mobile Number']")).sendKeys("8463954032");
-        //Adding multiple guest 1
-        /*driver.findElement(By.xpath("//button[@class='guest-details__add']")).click();
-        driver.findElement(By.xpath("(//input[@placeholder='First Name'])[1]")).sendKeys("bharath");
-        driver.findElement(By.xpath("(//input[@placeholder='Last Name'])[1]")).sendKeys("kumar");
-        //Done
-        driver.findElement(By.xpath("//button[@class='select-guest__button--save2']")).click();*/
         //Special requirement
         driver.findElement(By.xpath("//div[@aria-hidden='true']")).click();
         driver.findElement(By.xpath("//div[text()='Large bed']")).click();

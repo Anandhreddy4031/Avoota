@@ -14,7 +14,7 @@ public class Hotel_Booking {
     @Test
     public void booking() throws InterruptedException {
         //Navigate to url
-        Methods implument=new Methods();
+        Methods implument = new Methods();
         implument.url(driver);
         //login
         //implument.login(driver);
@@ -31,29 +31,29 @@ public class Hotel_Booking {
         driver.findElement(By.xpath("//span[text()='HYDERABAD, TELANGANA, INDIA']")).click();
         Thread.sleep(1500);
         //Checkin
-        WebElement in=driver.findElement(By.xpath("(//span[@class='date-value'])[1]"));
+        WebElement in = driver.findElement(By.xpath("(//span[@class='date-value'])[1]"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Thread.sleep(1000);
         js.executeScript("arguments[0].click();", in);
         Thread.sleep(1000);
         //selecting checkin date
-        WebElement d=driver.findElement(By.xpath("(//button[text()='1'])[2]"));
+        WebElement d = driver.findElement(By.xpath("(//button[text()='1'])[2]"));
         js.executeScript("arguments[0].click();", d);
         Thread.sleep(1000);
         //Done
-        WebElement don=driver.findElement(By.xpath("//button[text()='Done']"));
+        WebElement don = driver.findElement(By.xpath("//button[text()='Done']"));
         js.executeScript("arguments[0].click();", don);
         Thread.sleep(1000);
         //Checkout
-        WebElement out=driver.findElement(By.xpath("(//span[@class='date-value'])[2]"));
+        WebElement out = driver.findElement(By.xpath("(//span[@class='date-value'])[2]"));
         js.executeScript("arguments[0].click();", out);
         Thread.sleep(1000);
         //Selecting checkout date
-        WebElement da=driver.findElement(By.xpath("//button[text()='2']"));
+        WebElement da = driver.findElement(By.xpath("//button[text()='2']"));
         js.executeScript("arguments[0].click();", da);
         Thread.sleep(1000);
         //Done
-        WebElement done=driver.findElement(By.xpath("//button[text()='Done']"));
+        WebElement done = driver.findElement(By.xpath("//button[text()='Done']"));
         js.executeScript("arguments[0].click();", done);
         Thread.sleep(1000);
         //Rooms 1 Adding 1 person
@@ -69,8 +69,8 @@ public class Hotel_Booking {
         //Adding child 1
         driver.findElement(By.xpath("(//button[text()='+'])[6]")).click();
         //Child 1 age
-        WebElement age= driver.findElement(By.xpath("//select[@class='child-age-select']"));
-        Select sel=new Select(age);
+        WebElement age = driver.findElement(By.xpath("//select[@class='child-age-select']"));
+        Select sel = new Select(age);
         sel.selectByValue("12");
         //Adding room 4
         driver.findElement(By.xpath("//button[contains(@class,'add-room-button')]")).click();
@@ -79,28 +79,28 @@ public class Hotel_Booking {
         //Adding child 1
         driver.findElement(By.xpath("(//button[text()='+'])[8]")).click();
         //Child 1 age
-        WebElement age1=driver.findElement(By.xpath("(//select[@class='child-age-select'])[2]"));
-        Select sel1=new Select(age1);
+        WebElement age1 = driver.findElement(By.xpath("(//select[@class='child-age-select'])[2]"));
+        Select sel1 = new Select(age1);
         sel1.selectByValue("12");
         //Adding child 2
         driver.findElement(By.xpath("(//button[text()='+'])[8]")).click();
         //Child 2 age
-        WebElement age2=driver.findElement(By.xpath("(//select[@class='child-age-select'])[3]"));
-        Select sel2=new Select(age2);
+        WebElement age2 = driver.findElement(By.xpath("(//select[@class='child-age-select'])[3]"));
+        Select sel2 = new Select(age2);
         sel2.selectByValue("12");
         //Adding room 5
         driver.findElement(By.xpath("//button[contains(@class,'add-room-button')]")).click();
         //Adding child 1
         driver.findElement(By.xpath("(//button[text()='+'])[10]")).click();
         //Adding child 1 age
-        WebElement age3=driver.findElement(By.xpath("(//select[@class='child-age-select'])[4]"));
-        Select sel3=new Select(age3);
+        WebElement age3 = driver.findElement(By.xpath("(//select[@class='child-age-select'])[4]"));
+        Select sel3 = new Select(age3);
         sel3.selectByValue("12");
         //Adding child 2
         driver.findElement(By.xpath("(//button[text()='+'])[10]")).click();
         //Adding child 2 age
-        WebElement age4=driver.findElement(By.xpath("(//select[@class='child-age-select'])[5]"));
-        Select sel4=new Select(age4);
+        WebElement age4 = driver.findElement(By.xpath("(//select[@class='child-age-select'])[5]"));
+        Select sel4 = new Select(age4);
         sel4.selectByValue("12");
         Thread.sleep(1000);
         //Apply
@@ -190,18 +190,13 @@ public class Hotel_Booking {
         driver.findElement(By.xpath("//button[@class='select-guest__button--save2']")).click();
         //Special requirement
         driver.findElement(By.xpath("//div[@aria-hidden='true']")).click();
-        WebElement drop= driver.findElement(By.xpath("//div[text()='Large bed']"));
+        WebElement drop = driver.findElement(By.xpath("//div[text()='Large bed']"));
         js.executeScript("arguments[0].click();", drop);
 
         driver.findElement(By.xpath("//textarea[@placeholder='Write something...']")).sendKeys("Nothing to say");
 
         Thread.sleep(4000);
-    }
-    // closes browser even if test fails
-    @AfterMethod()
-    public void quit() {
-        if (driver != null) {
-            driver.quit();
-        }
+        // closes browser even if test fails
+        driver.quit();
     }
 }
