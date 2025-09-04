@@ -5,7 +5,7 @@
         <listener class-name="org.testng.reporters.EmailableReporter2"/>
         <listener class-name="org.testng.reporters.XMLReporter"/>
     </listeners>
-    <test verbose="9" preserve-order="true" name="Batch Execution">
+    <test verbose="1" preserve-order="true" name="Batch Execution">
         <classes>
             <class name="Hotel_Bookings.My_Account"/>
             <class name="Hotel_Bookings.Hotel_Booking"/>

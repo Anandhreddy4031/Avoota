@@ -25,6 +25,9 @@ public class Popular_destination {
         //Clicking on local area
         driver.findElement(By.xpath("//span[text()='GOA, INDIA']")).click();
         Thread.sleep(1000);
+        //Check-in-out
+        implument.checkin_out(driver);
+        Thread.sleep(2000);
         //Clicking on search
         driver.findElement(By.xpath("//span[text()='Modify Search']")).click();
         Thread.sleep(3000);
@@ -37,9 +40,6 @@ public class Popular_destination {
         js.executeScript("arguments[0].click();", hotel);
         //Transfering to new tab
         implument.tab(driver);
-        //Check-in-out
-        implument.checkin_out(driver);
-        Thread.sleep(2000);
         //Clicking on room
         driver.findElement(By.xpath("//span[@class='guests-summary']")).click();
         //Adding guest
