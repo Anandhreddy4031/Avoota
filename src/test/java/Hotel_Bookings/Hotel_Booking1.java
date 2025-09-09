@@ -48,7 +48,6 @@ public class Hotel_Booking1 {
         driver.findElement(By.xpath("(//button[text()='Reserve'])[2]")).click();
         //Primary guest details
         implument.guestdetails(driver);
-
         Thread.sleep(4000);
         //Close browser
         driver.quit();

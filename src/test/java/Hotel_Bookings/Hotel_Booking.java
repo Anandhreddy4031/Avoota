@@ -192,9 +192,8 @@ public class Hotel_Booking {
         driver.findElement(By.xpath("//div[@aria-hidden='true']")).click();
         WebElement drop = driver.findElement(By.xpath("//div[text()='Large bed']"));
         js.executeScript("arguments[0].click();", drop);
-
+        //Any other requests?
         driver.findElement(By.xpath("//textarea[@placeholder='Write something...']")).sendKeys("Nothing to say");
-
         Thread.sleep(4000);
         // closes browser even if test fails
         driver.quit();

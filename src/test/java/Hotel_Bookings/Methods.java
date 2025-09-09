@@ -115,7 +115,7 @@ public class Methods {
                 break;
             }
         }
-        Thread.sleep(7000);
+        Thread.sleep(9000);
     }
     @Test
     public void guestdetails(WebDriver driver)throws InterruptedException{

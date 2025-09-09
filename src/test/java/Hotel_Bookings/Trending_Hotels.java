@@ -40,7 +40,6 @@ public class Trending_Hotels {
         driver.findElement(By.xpath("//div[@aria-hidden='true']")).click();
         driver.findElement(By.xpath("//div[text()='Large bed']")).click();
         driver.findElement(By.xpath("//textarea[@placeholder='Write something...']")).sendKeys("Nothing to say");
-
         Thread.sleep(4000);
         //Close browser
         driver.quit();
